@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy Bird: Cute Version</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="stage-panel" aria-label="Flappy Bird Cute Version">
+      <canvas id="gameCanvas" aria-label="Flappy Bird Cute Version game canvas"></canvas>
+
+      <div id="hud" class="hud" aria-live="polite">
+        <div>
+          <span>Score</span>
+          <strong id="scoreBadge">0</strong>
+        </div>
+        <div>
+          <span>Best</span>
+          <strong id="hudBestScore">0</strong>
+        </div>
+      </div>
+
+      <div id="menuScreen" class="screen active">
+        <div class="screen-card menu-card">
+          <canvas id="menuBirdPreview" class="menu-bird" width="126" height="98" aria-hidden="true"></canvas>
+          <h1>Flappy Bird: Cute Version</h1>
+          <p class="menu-best">High Score: <strong id="menuBestScore">0</strong></p>
+          <div class="button-stack">
+            <button id="playButton" class="primary-button" type="button">Play</button>
+            <button id="selectButton" type="button">Character Selection</button>
+            <button id="quitButton" type="button">Quit</button>
+          </div>
+        </div>
+        <p class="credit">Made by Travis</p>
+      </div>
+
+      <div id="characterScreen" class="screen">
+        <div class="screen-card character-card">
+          <p class="tiny-label">Choose a color</p>
+          <h2>Character Selection</h2>
+          <div id="characterGrid" class="character-grid" aria-label="Character color choices"></div>
+          <button id="backButton" type="button">Back</button>
+        </div>
+        <p class="credit">Made by Travis</p>
+      </div>
+
+      <div id="pausedScreen" class="screen">
+        <div class="screen-card compact-card">
+          <h2>Ready?</h2>
+          <p>Tap, click, or press Space to flap.</p>
+          <button id="resumeButton" class="primary-button" type="button">Start Flying</button>
+        </div>
+      </div>
+
+      <div id="gameOverScreen" class="screen">
+        <div class="screen-card game-over-card">
+          <p class="tiny-label">Flight report</p>
+          <h2>Game Over</h2>
+          <div class="results-row">
+            <div>
+              <span>Score</span>
+              <strong id="finalScore">0</strong>
+            </div>
+            <div>
+              <span>Best</span>
+              <strong id="bestScore">0</strong>
+            </div>
+          </div>
+          <p id="gameOverLine" class="game-over-line">A sweet little tumble. Try again.</p>
+          <div class="button-stack">
+            <button id="retryButton" class="primary-button" type="button">Play Again</button>
+            <button id="menuButton" type="button">Main Menu</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="quitScreen" class="screen">
+        <div class="screen-card compact-card">
+          <h2>Thanks for flying</h2>
+          <p>You can close this browser tab whenever you are ready.</p>
+          <button id="quitBackButton" class="primary-button" type="button">Back to Menu</button>
+        </div>
+        <p class="credit">Made by Travis</p>
+      </div>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
